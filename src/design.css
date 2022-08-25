@@ -261,13 +261,43 @@ select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
+  color: hsl(var(--clr-accent-primary) / 0.65);
 }
+
 
 /********************/
 /* ***Components*** */
 /********************/
 /* Components have larger pieces and more chunks to them */
+.gradient-text {
+  background-image: linear-gradient(45deg, #ff55009a, #e6f7ff9a, #66ccff9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;
+  animation: animatedText 3s infinite alternate-reverse;
+}
+
+.gradient-text:hover,
+.gradient-text:focus {
+    background-image: linear-gradient(-45deg, #FF5500, #E6F7FF, #66CCFF);
+}
+
+.gradient-text.active {
+    background-image: linear-gradient(75deg, #0393c3, #FF5500, #db3400, #66CCFF);
+    animation: animatedText 4s infinite alternate-reverse;
+}
+
+@keyframes animatedText {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
 .large-button {
   position: relative;
   display: grid;
@@ -281,8 +311,6 @@ select {
   aspect-ratio: 1;
   text-decoration: none;
 }
-
-
 
 .large-button::before {
   content: '';
@@ -308,30 +336,27 @@ select {
   animation: animate 40s linear infinite;
 }
 
-
-
 @keyframes animate {
-    0%{
-        background-position: 0 0;
-    }
-    50%{
-        background-position: 400% 0;
-    }
-    100%{
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .large-button:hover,
 .large-button:focus {
-    background-color:hsl(var(--clr-dark));
-    color: hsl(var(--clr-light));
-    
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-light));
 }
 
 .large-button:hover::before,
 .large-button:focus::before {
-    filter: blur(1.5rem);
+  filter: blur(1.5rem);
 }
 
 /* .large-button::after {
@@ -351,6 +376,13 @@ select {
 .large-button:focus::after {
     opacity: 1;
     transform: scale(1.5);
+} */
+
+/* .coolLink {
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 } */
 
 .primary-navigation {
