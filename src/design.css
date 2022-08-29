@@ -9,8 +9,8 @@
   --clr-dark: 200 100% 4%;
   --clr-light: 200 100% 70%;
   --clr-white: 200 100% 95%;
-  --clr-accent-primary: 20 100% 50%;
-  --clr-accent-secondary: 220 8% 73%;
+  --clr-accent-primary: 20 100% 70%;
+  --clr-accent-secondary: 202 66% 80%;
 
   /* Font-sizes */
   /* try to use rem on font size due to access. PX can override large print devices */
@@ -122,9 +122,9 @@ select {
   gap: var(--gap, 1rem);
 }
 
-.flow > *:where(:not(:first-child)) {
+.flow>*:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .container {
@@ -271,7 +271,7 @@ select {
 
 /* text */
 .gradient-text {
-  background-image: linear-gradient(45deg, #ff55009a, #e6f7ff9a, #66ccff9a);
+  background-image: linear-gradient(45deg, #FF99669A, #AAD5EE9A, #66CCFF9A);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -282,11 +282,11 @@ select {
 
 .gradient-text:hover,
 .gradient-text:focus {
-  background-image: linear-gradient(-45deg, #ff5500, #e6f7ff, #66ccff);
+  background-image: linear-gradient(-45deg, #FF9966, #AAD5EE, #66ccff);
 }
 
 .gradient-text.active {
-  background-image: linear-gradient(75deg, #0393c3, #ff5500, #db3400, #66ccff);
+  background-image: linear-gradient(75deg, #66CCFF, #AAD5EE, #FF9966);
   animation: animatedText 4s infinite alternate-reverse;
 }
 
@@ -294,6 +294,7 @@ select {
   from {
     background-position: 0%;
   }
+
   to {
     background-position: 100%;
   }
@@ -321,17 +322,15 @@ select {
   left: -2px;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  background: linear-gradient(
-    50deg,
-    #00aaff,
-    #000e14,
-    #ff5500,
-    #000e14,
-    #00aaff,
-    #000e14,
-    #ff5500,
-    #000e14
-  );
+  background: linear-gradient(-50deg,
+      #66CCFF,
+      #000e14,
+      #FF9966,
+      #AAD5EE,
+      #66CCFF,
+      #000e14,
+      #FF9966,
+      #AAD5EE);
   background-size: 400%;
   border-radius: 50%;
   z-index: -1;
@@ -342,9 +341,11 @@ select {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -361,32 +362,6 @@ select {
   filter: blur(1.5rem);
 }
 
-/* .large-button::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: hsl(var(--clr-accent-primary) / .15);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 500ms linear, transform 750ms ease-in-out;
-} */
-
-/* If you use hover also use focus. This helps people who have to tab and screen readers */
-/* .large-button:hover::after,
-.large-button:focus::after {
-    opacity: 1;
-    transform: scale(1.5);
-} */
-
-/* .coolLink {
-    position: relative;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-} */
-
 /* navigation */
 .primary-navigation {
   --gap: 8rem;
@@ -400,34 +375,34 @@ select {
   text-decoration: none;
 }
 
-.primary-navigation a > span {
+.primary-navigation a>span {
   font-weight: 700;
   margin-right: 0.5em;
 }
 
-.underline-indicators > * {
+.underline-indicators>* {
   cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
   border: 0;
-  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+  border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
+.underline-indicators>*:hover,
+.underline-indicators>*:focus {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected='true'] {
-  color: hsl(var(--clr-white));
-  border-color: hsl(var(--clr-white) / 1);
+.underline-indicators>.active,
+.underline-indicators>[aria-selected='true'] {
+  border-image: linear-gradient(90deg, #000E14, #66CCFF, #FF9966, #66CCFF, #000E14);
+  border-image-slice: 1;
 }
 
 .tab-list {
   --gap: 2rem;
 }
 
-.dot-indicators > * {
+.dot-indicators>* {
   cursor: pointer;
   border: 0;
   border-radius: 50%;
@@ -435,46 +410,43 @@ select {
   background-color: hsl(var(--clr-white) / 0.25);
 }
 
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
+.dot-indicators>*:hover,
+.dot-indicators>*:focus {
   background-color: hsl(var(--clr-white) / 0.5);
 }
 
-.dot-indicators > [aria-selected='true'] {
+.dot-indicators>[aria-selected='true'] {
   background-color: hsl(var(--clr-white) / 1);
 }
 
 /* numbers indicator */
 
 .numbers-indicators {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
 }
 
-.numbers-indicators > * {
-    cursor: pointer;
-    position: relative;
-    place-items: center;
-    padding: 0 2rem;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    background-color: hsl( var(--clr-dark) / .25);
-    color: hsl( var(--clr-white) / 1);
-    border-color: hsl( var(--clr-light) / .5);
+.numbers-indicators>* {
+  cursor: pointer;
+  position: relative;
+  place-items: center;
+  padding: 0 2rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: hsl(var(--clr-dark) / .25);
+  color: hsl(var(--clr-white) / 1);
+  border: 2.5px solid hsl(var(--clr-light) / .5);
 }
 
-.numbers-indicators > *:hover,
-.numbers-indicators > *:focus {
-    border-color: hsl(var(--clr-accent-primary) / .7);
+.numbers-indicators>*:hover,
+.numbers-indicators>*:focus {
+  border-color: hsl(var(--clr-accent-primary) / .7);
 }
 
-.numbers-indicators > [aria-selected="true"] {
-    background-color: hsl( var(--clr-light) / 1);
-    color: hsl(var(--clr-dark)); 
-    border-color: hsl(var(--clr-accent-secondary));
+.numbers-indicators>[aria-selected="true"] {
+  background-color: hsl(var(--clr-light) / 1);
+  color: hsl(var(--clr-dark));
+  border-color: hsl(var(--clr-accent-primary));
 }
-
-
-
