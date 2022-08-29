@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design.css">
-    <link rel="stylesheet" href="assets/styles/webgl.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="script.js" defer></script>
 </head>
-<body>
-    
+
+<body class="home">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+            <img src="./assets/images/shared/logo.svg" alt="space tourism logo" class="logo">
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+                aria-expanded="false">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li>
+                    <a class="ff-sans-cond uppercase text-white gradient-text letter-spacing-2" href="index.html"><span
+                            aria-hidden="true">00</span>Home</a>
+                </li>
+                <li>
+                    <a class="ff-sans-cond uppercase text-white gradient-text letter-spacing-2" href="#"><span
+                            aria-hidden="true">01</span>Destination</a>
+                </li>
+                <li>
+                    <a class="ff-sans-cond uppercase text-white gradient-text letter-spacing-2" href="#"><span
+                            aria-hidden="true">02</span>Crew</a>
+                </li>
+                <li>
+                    <a class="ff-sans-cond uppercase text-white gradient-text letter-spacing-2" href="#"><span
+                            aria-hidden="true">03</span>Technologies</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- add "main" for assistive technologies -->
+    <main id="main" class="grid-container grid-container--home">
+        <div>
+            <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">Explore our system with
+                <span class="fs-900 ff-serif text-white d-block gradient-text active">SOLIT</span>
+            </h1>
+
+            <p>SOLIT (SOL Interplanetary Travel) Space Cruises provides you the opportunity of a lifetime.
+                Cruise the solar system at sub-light speeds. View the rings of Saturn in
+                luxurious accomodations. Travel to destinations only dreamed of by our ancestors. 
+                The sky is no longer the limit, but the first step to your next adventure!
+            </p>
+        </div>
+        <div>
+            <a href="#" target="_blank" class="large-button uppercase ff-serif text-dark bg-white"
+                style="margin-top: 5rem">Explore</a>
+        </div>
+    </main>
 </body>
+
 </html>
