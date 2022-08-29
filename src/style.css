@@ -436,6 +436,7 @@ select {
 .large-button:focus {
     background-color: hsl(var(--clr-dark));
     color: hsl(var(--clr-light));
+    outline: none;
 }
 
 .large-button:hover::before,
