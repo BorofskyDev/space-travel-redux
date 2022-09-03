@@ -1,0 +1,75 @@
+@import url('style.css');
+
+.faq {
+    position: relative;
+}
+
+.faq__wrap {
+    padding: 3rem 4.5%;
+}
+
+.faq .question {
+    position: relative;
+    border-bottom: 1px solid hsl(var(--clr-light));
+    padding: 24px 0 24px 0;
+}
+
+.faq .question h3 {
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .faq .question h3 {
+    }
+}
+
+.faq .question__wrap {
+    display: grid;
+    grid-template-columns: 26px auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq .question__header-title {
+    padding: 1rem;
+}
+
+.faq .question__header-subtitle {
+    padding: 1rem;
+}
+
+.faq .question__answer {
+    font-size: 26px;
+    margin: 20px 0;
+    max-width: 40em;
+    padding-left: 40px;
+    transition: all 0.2s ease-in-out;
+    display: none;
+}
+
+.faq .question__status {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border: 3px solid hsl(var(--clr-accent-primary));
+    border-radius: 50%;
+    margin-top: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 700px) {
+    .faq .question__status {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.faq .question.open .question__answer {
+    display: block;
+}
+
+.faq .question.open .question__status {
+    background: hsl(var(--clr-light));
+    
+}

@@ -1,3 +1,7 @@
+/**
+ * Tab System
+ */
+
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
@@ -64,3 +68,6 @@ function hideContent(parent, content) {
 function showContent(parent, content) {
   parent.querySelector(content).removeAttribute('hidden');
 }
+
+
+
