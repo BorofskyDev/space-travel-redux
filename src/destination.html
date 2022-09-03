@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Space tourism website</title>
+    <script src="script.js" defer></script>
+    <script src="tabs.js" defer></script>
+</head>
+
+<body class="destination">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+            <img src="./assets/images/shared/logo.svg" alt="space tourism logo" class="logo">
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+                aria-expanded="false">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+                            aria-hidden="true">00</span>Home</a>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"
+                        href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span
+                            aria-hidden="true">02</span>Crew</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="#"><span
+                            aria-hidden="true">03</span>Technology</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--destination flow">
+        <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
+
+        <picture id="moon-image">
+            <source srcset="assets/images/destination/image-moon.webp" type="image/webp">
+            <img src="assets/images/destination/image-moon.png" alt="the moon">
+        </picture>
+        <picture hidden id="mars-image">
+            <source srcset="assets/images/destination/image-mars.webp" type="image/webp">
+            <img src="assets/images/destination/image-mars.png" alt="the planet mars">
+        </picture>
+        <picture hidden id="europa-image">
+            <source srcset="assets/images/destination/image-europa.webp" type="image/webp">
+            <img src="assets/images/destination/image-europa.png" alt="the planet europa">
+        </picture>
+        <picture hidden id="titan-image">
+            <source srcset="assets/images/destination/image-titan.webp" type="image/webp">
+            <img src="assets/images/destination/image-titan.png" alt="the moon titan">
+        </picture>
+
+
+        <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+            <button aria-selected="true" role="tab" aria-controls="moon-tab"
+                class="uppercase ff-sans-cond text-light letter-spacing-2" tabindex="0"
+                data-image="moon-image">Moon</button>
+            <button aria-selected="false" role="tab" aria-controls="mars-tab"
+                class="uppercase ff-sans-cond text-light letter-spacing-2" tabindex="-1"
+                data-image="mars-image">Mars</button>
+            <button aria-selected="false" role="tab" aria-controls="europa-tab"
+                class="uppercase ff-sans-cond text-light letter-spacing-2" tabindex="-1"
+                data-image="europa-image">Europa</button>
+            <button aria-selected="false" role="tab" aria-controls="titan-tab"
+                class="uppercase ff-sans-cond text-light letter-spacing-2" tabindex="-1"
+                data-image="titan-image">Titan</button>
+        </div>
+
+        <!-- The moon -->
+        <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif gradient-text active">Moon</h2>
+
+            <p>Enjoy a stunning view of the James Pearson Lunar Elevator as you arrive at the Neil
+                Armstrong Lunar Port. SOLIT's Lunar Package will take you on a historical tour of
+                the moon landings from 1969-1972, as well as ensure you get a beautiful view of
+                earth no matter where your room is. A quick get away for those who don't want
+                to travel too far from home.
+            </p>
+
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Est. Cost for Two</h3>
+                    <p class="ff-serif uppercase">$10,000</p>
+                </div>
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Total Time</h3>
+                    <p class="ff-serif uppercase">7 Days</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Mars -->
+        <article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif gradient-text active">Mars</h2>
+
+            <p>Earth is our home, but Mars is our first universal triumph, a moment when we
+                declared to the universe that we would no longer limit ourselves to the planet
+                of our origin. Enjoy the legendary nightlife of the Unity Colony or choose to rough
+                it like the earlier colonists. No matter which vacation package you pick, you'll find why
+                people fall in love with our second planet. (Price and duration vary based on package)</p>
+
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Est Cost for Two</h3>
+                    <p class="ff-serif uppercase">$20,000 - $80,000</p>
+                </div>
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Total Time</h3>
+                    <p class="ff-serif uppercase">2 weeks - 3 months</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Europa -->
+        <article hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif gradient-text active">Europa</h2>
+
+            <p>The newly finished SOLIT Europa Resort is now available to you! Enjoy a trip to the surface 
+                to stay in one of our state-of-the-art cabins that will protect you from Europa's elements
+                while allowing you to enjoy a beautiful view as you rotate around the King of Planets. For those 
+                who don't feel up to staying on the cold surface, the Edward Hubble Europa Station offers 
+                some of the finest luxuries in our solar system.
+            </p>
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Est Cost for Two</h3>
+                    <p class="ff-serif uppercase">$65,000</p>
+                </div>
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Total Time</h3>
+                    <p class="ff-serif uppercase">1 Month</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Titan -->
+        <article hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif gradient-text active">Titan</h2>
+
+            <p>The newest addition to the SOLIT family, see Saturn like you've never seen it before, 
+                while staying in the Carl Sagan Titan Space Port. Enjoy yoga or meditation as with Saturn 
+                in your viewport. Rub shoulders with some of Earth's greatest scientists
+                who descend to the planet to continue the search for life on Titan's surface. Listen 
+                to the stories of the explorers from the United Nations Solar Fleet as they stop to rest and 
+                relax before heading further out into our galaxy! (At this time, all trips to the surface are 
+                for authorized persons only)
+            </p>
+
+            <div class="destination-meta flex">
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Est. Cost for Two</h3>
+                    <p class="ff-serif uppercase">$200,000</p>
+                </div>
+                <div>
+                    <h3 class="text-light fs-200 uppercase">Total Time</h3>
+                    <p class="ff-serif uppercase">4 Months</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <body>
+
+
+
+    </body>
+
+</html>
