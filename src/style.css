@@ -508,7 +508,7 @@ select {
         height: 1px;
         width: 100%;
         margin-right: -2.5rem;
-        background: hsl(var(--clr-white) / .25);
+        background: hsl(var(--clr-light) / .75);
         order: 1;
     }
 
