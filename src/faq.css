@@ -2,6 +2,10 @@
 
 .faq {
     position: relative;
+    background-image: url(./assets/images/faq/saturn-mobile.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 50px;
 }
 
 .faq__wrap {
@@ -16,11 +20,6 @@
 
 .faq .question h3 {
     cursor: pointer;
-}
-
-@media (max-width: 700px) {
-    .faq .question h3 {
-    }
 }
 
 .faq .question__wrap {
@@ -58,12 +57,6 @@
     transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 700px) {
-    .faq .question__status {
-        width: 25px;
-        height: 25px;
-    }
-}
 
 .faq .question.open .question__answer {
     display: block;
@@ -72,4 +65,22 @@
 .faq .question.open .question__status {
     background: hsl(var(--clr-light));
     
+}
+
+@media (min-width: 45rem) {
+    .faq {
+        background-image: url(./assets/images/faq/saturn.jpg);
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 35rem) {
+    .faq {
+        background-image: url(./assets/images/faq/saturn.jpg);
+        background-position: left top;
+        background-attachment: fixed;
+        height: 100%;
+    }
 }

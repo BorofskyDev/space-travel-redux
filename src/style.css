@@ -224,6 +224,14 @@ select {
     color: hsl(var(--clr-white));
 }
 
+.text-alt-red {
+    color: hsl(var(--clr-accent-primary));
+}
+
+.text-alt-purple {
+    color: hsl(var(--clr-accent-secondary));
+}
+
 /* typography */
 
 .ff-serif {
@@ -312,6 +320,13 @@ select {
 /* ------------------- */
 
 /* text */
+.gradient-standard {
+    background-image: linear-gradient(60deg, #E94560, #7C45E9 , #45E9CE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .gradient-text {
     background-image: linear-gradient(45deg, #E94560, #7C45E9, #45E9CE);
     -webkit-background-clip: text;
@@ -723,10 +738,10 @@ body {
         'image'
         'tabs'
         'content';
-    }
+}
 
-    .grid-container--crew>picture {
-        grid-area: image;
+.grid-container--crew>picture {
+    grid-area: image;
     max-width: 60%;
     border-bottom: 1px solid hsl(var(--clr-white) / .1);
 }
@@ -743,19 +758,7 @@ body {
     color: hsl(var(--clr-white) / .5)
 }
 
-/*FAQ Layout*/
-.grid-container--faq {
-    position: relative;
-}
 
-.question-container {
-    align-items: center;
-    place-items: center;
-}
-
-.question-status {
-    
-}
 
 
 
