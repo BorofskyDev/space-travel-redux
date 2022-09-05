@@ -583,9 +583,9 @@ dot-indicators>*:hover,
 
 .numbers-indicators {
     display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 2rem;
+    /* flex-direction: column; */
+    /* padding: 2rem;
+    margin: 2rem; */
 }
 
 .numbers-indicators>* {
@@ -759,7 +759,25 @@ body {
 }
 
 
+/* Technology layout */
+.grid-container--technology {
+    display: grid;
+    text-align: center;
+    --flow-space: 2rem;
+        grid-template-areas:
+            'title'
+            'image'
+            'tabs'
+            'content';
+}
 
+.grid-container--technology>picture  {
+    grid-area: image;
+    grid-column: span 4;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
 
 
 @media (min-width: 35em) {
