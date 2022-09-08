@@ -688,23 +688,7 @@ body {
     }
 }
 
-/* .crew {
-    background-image: url(./assets/crew/background-crew-mobile.jpg);
-}
 
-
-@media (min-width: 35rem) {
-    .crew {
-        background-position: center center;
-        background-image: url(./assets/crew/background-crew-tablet.jpg);
-    }
-}
-
-@media (min-width: 45rem) {
-    .crew {
-        background-image: url(./assets/crew/background-crew-desktop.jpg);
-    }
-} */
 
 /* ----------------------------- */
 /* Layout                        */
@@ -763,35 +747,6 @@ body {
 .destination-meta p {
     font-size: 1.75rem;
 }
-
-/* Crew layout */
-.grid-container--crew {
-    --flow-space: 2rem;
-    grid-template-areas:
-        'title'
-        'image'
-        'tabs'
-        'content';
-}
-
-.grid-container--crew>picture {
-    grid-area: image;
-    max-width: 60%;
-    border-bottom: 1px solid hsl(var(--clr-white) / .1);
-}
-
-.grid-container--crew>.dot-indicators {
-    grid-area: tabs;
-}
-
-.grid-container--crew>.crew-details {
-    grid-area: content;
-}
-
-.crew-details h2 {
-    color: hsl(var(--clr-white) / .5)
-}
-
 
 /* Technology layout */
 .grid-container--technology {
@@ -978,20 +933,6 @@ body {
         justify-content: space-evenly;
     }
 
-    .grid-container--crew {
-        padding-bottom: 0;
-        grid-template-areas:
-            'title'
-            'content'
-            'tabs'
-            'image';
-    }
-
-    .grid-continer--crew {
-        align-content: center;
-        justify-content: center;
-    }
-
     .technology-title {
         margin-left: 2rem;
     }
@@ -1051,25 +992,6 @@ body {
         justify-content: start;
     }
 
-    .grid-container--crew {
-        grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 20rem) minmax(1rem, 1fr);
-        justify-items: start;
-        grid-template-areas:
-            '. title title .'
-            '. content image .'
-            '. tabs image .';
-    }
-
-    /* .grid-container--crew > .dot-indicators {
-        justify-self: start;
-    } */
-
-    .grid-container--crew>picture {
-        grid-column: span 2;
-        align-self: end;
-        max-width: 100%;
-    }
-
     .grid-container--faq {
         grid-column: span 4;
         align-self: right;
@@ -1126,13 +1048,4 @@ body {
         margin-inline: 4rem;
         padding-inline: 2rem;
     }
-
-
 }
-
-
-
-
-/* [role="tab"]:focus {
-    color: limegreen
-} */
