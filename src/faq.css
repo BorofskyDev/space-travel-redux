@@ -1,11 +1,12 @@
-@import url('style.css');
+/* @import url('style.css');
 
 .faq {
     position: relative;
     background-image: url(./assets/images/faq/saturn-mobile.jpg);
-    background-position: center right;
-    background-repeat: no-repeat;
-    height: 50px;
+    background-position: center right ;
+    background-repeat: no-repeat; */
+    /* background-color: #000000; */
+    /* height: 100%;
 }
 
 .faq__wrap {
@@ -83,4 +84,4 @@
         background-attachment: fixed;
         height: 100%;
     }
-}
+} */
